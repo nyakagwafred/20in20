@@ -1,0 +1,37 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 50px;
+	text-decoration: underline;
+	color: rgb(15, 15, 15);
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.box {
+	width: 200px;
+	height: 280px;
+	background-color: rosybrown;
+	margin: 10px;
+	border-radius: 4px;
+	text-align: center;
+	box-shadow: 2px 2px #888888;
+	padding-top: 20px;
+	font-size: 200px;
+}
+
+img {
+	max-width: 50%;
+}
