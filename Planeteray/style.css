@@ -1,1 +1,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #224941 url('./img/bg.jpg') no-repeat center center;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	height: 300px;
+	width: 300px;
+	position: relative;
+	z-index: -10;
+}
+
+#circle-sun {
+	background: #224941 url('./img/sun.jpg') no-repeat center center;
+	position: absolute;
+	background-color: turquoise;
+	width: 25%;
+	height: 25%;
+	border-radius: 50%;
+	border: 1px solid red;
+	top: 110px;
+	left: 110px;
+	z-index: 5;
+}
+
+#circle-earth {
+	position: absolute;
+	background-color: turquoise;
+	background: transparent;
+	width: 150%;
+	height: 150%;
+	border-radius: 50%;
+	border: 1px solid red;
+	top: -75px;
+	left: -75px;
+	z-index: 5;
+}
+
+#circle-venus {
+	position: absolute;
+	background: transparent;
+	width: 135%;
+	height: 135%;
+	border-radius: 50%;
+	border: 1px solid red;
+	top: -52px;
+	left: -52px;
+	z-index: 1;
+}
+#circle-mercury {
+	position: absolute;
+	background-color: wheat;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid red;
+	background: transparent;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+#jupiter {
+	position: absolute;
+	top: -270px;
+	left: 140px;
+	height: 420px;
+	animation: rotate 20.5s linear forwards infinite;
+	transform-origin: bottom center;
+}
+
+#mars {
+	position: absolute;
+	top: -170px;
+	left: 140px;
+	height: 320px;
+	animation: rotate 20.5s linear forwards infinite;
+	transform-origin: bottom center;
+}
+
+#earth {
+	position: absolute;
+	top: -130px;
+	left: 140px;
+	height: 280px;
+	animation: rotate 25.5s linear forwards infinite;
+	transform-origin: bottom center;
+}
+
+#venus {
+	position: absolute;
+	top: -110px;
+	left: 140px;
+	height: 260px;
+	animation: rotate 7.5s linear forwards infinite;
+	transform-origin: bottom center;
+	z-index: 1;
+}
+
+#mercury {
+	position: absolute;
+	top: -58px;
+	left: 140px;
+	height: 208px;
+	animation: rotate 10.5s linear forwards infinite;
+	transform-origin: bottom center;
+	z-index: 10;
+}
+
+.pointer {
+	border-radius: 50%;
+	height: 20px;
+	width: 20px;
+	display: block;
+	color: #fff;
+}
+
+span {
+	margin-top: 50px;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate (0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
