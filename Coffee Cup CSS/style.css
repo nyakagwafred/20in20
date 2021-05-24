@@ -1,0 +1,105 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: brown;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: sans-serif;
+}
+/* saucer */
+.bottom {
+	position: absolute;
+	top: 30%;
+	width: 300px;
+	height: 300px;
+	background: #ccc;
+	border-radius: 50%;
+	box-shadow: -12px 11px 34px -2px #0f0f0f;
+}
+.cup {
+	width: 170px;
+	height: 170px;
+	position: relative;
+	left: 40px;
+	top: 60px;
+	background: #ccc;
+	border-radius: 50%;
+	box-shadow: -12px 11px 34px -2px #0f0f0f, -12px 11px 34px -2px #0f0f0f;
+}
+/* cup handle */
+.cup::before {
+	content: '';
+	width: 25px;
+	height: 35px;
+	position: absolute;
+	background: #ccc;
+	top: 110px;
+	transform: rotate(-45deg);
+	left: 20px;
+	box-shadow: -12px 11px 34px -2px #0f0f0f, -12px 11px 34px -2px #0f0f0f;
+	z-index: 3;
+	border-radius: 25px 0 0 25px;
+}
+.liquid {
+	position: relative;
+	background: rgb(119, 31, 31);
+	border: 10px solid #ccc;
+	box-shadow: -12px 11px 34px -2px #0f0f0f;
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	left: 20px;
+	top: 10px;
+}
+.liquid::after {
+	content: '';
+	width: 10px;
+	height: 35px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	transform: rotate(-45deg);
+	box-shadow: 2px 2px 10px -2px #fff;
+	display: inline-block;
+	background: #d6d6d5;
+	position: absolute;
+	left: 75px;
+	top: 10px;
+}
+.spoon {
+	width: 20px;
+	height: 210px;
+	background: rgb(115, 117, 117);
+	position: absolute;
+	bottom: 10px;
+	left: 230px;
+	transform: rotate(25deg);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	box-shadow: -12px 11px 34px inset #413d3d, -12px 8px 24px -2px #0f0f0f;
+}
+.spoon::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: -18px;
+	top: -10px;
+	width: 60px;
+	height: 90px;
+	background: rgb(115, 117, 117);
+	box-shadow: -12px 11px 34px inset #312f2f, -12px 8px 24px -2px #0f0f0f;
+	border-radius: 50%;
+}
+p {
+	position: absolute;
+	top: -130px;
+	left: 10px;
+	font-size: 25px;
+	color: rgb(7, 7, 7);
+}
+span {
+	color: rgb(255, 255, 255);
+	font-weight: 700;
+	font-size: 39px;
+}
