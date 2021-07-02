@@ -145,12 +145,48 @@ const moveBall = () => {
 					ball.dy *= -1;
 					brick.visible = false;
 
-					//increaseScore();
+					increaseScore();
 				}
 			}
 		});
 	});
 };
+
+// Hit bottom wall - Lose
+if (ball.y + ball.size > canvas.height) {
+	showAllBricks();
+	score = 0;
+}
+
+//Increase score
+
+const increaseScore = () => {
+	score++;
+
+	if (score % (brickRowCount * brickColumnCount) === 0) {
+		ball.visible = false;
+		paddle.visible = false;
+
+		//After 0.5 sec restart the game
+		setTimeout(function () {
+			showAllBricks();
+			score = 0;
+			paddle.x = canvas.width / 2 - 40;
+			paddle.y = canvas.height - 20;
+			ball.x = canvas.width / 2;
+			ball.y = canvas.height / 2;
+			ball.visible = true;
+			paddle.visible = true;
+		}, delay);
+	}
+};
+
+// Make all bricks appear
+function showAllBricks() {
+	bricks.forEach((column) => {
+		column.forEach((brick) => (brick.visible = true));
+	});
+}
 
 const update = () => {
 	movePaddle();
